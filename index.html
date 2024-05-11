@@ -1,0 +1,120 @@
+<!-- Tag pembuka untuk dokumen HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Pengaturan karakter dan tampilan halaman -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul halaman -->
+    <title>Chaiden - Registration Form </title>
+    <!-- Penghubung ke file stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Pengaturan font dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Kontainer utama dengan layout fleksibel -->
+    <div class="container" style="display: flex; flex-wrap: wrap;">
+        <!-- Konten di sisi kiri dengan gambar latar belakang -->
+        <div class="content-left" style="background-image: url('img/college.png'); background-size: cover; background-position: center; padding: 20px;">
+        </div>
+        <!-- Konten di sisi kanan -->
+        <div class="content-right">
+            <!-- Judul dan deskripsi -->
+            <h1 style="text-align: left; font-family: Radio Canada Big, sans-serif; font-optical-sizing: auto; margin-bottom: 5px;">WELCOME STUDENTS!</h1>
+            <p style="margin-top: 5px; margin-bottom: 20px;">Fill the registration form below to join CF University!</p>
+            <!-- Garis pemisah dan formulir -->
+            <hr>
+            <br>
+            <form id="registrationForm">
+                <!-- Input untuk nama depan -->
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <!-- Input untuk nama belakang -->
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <!-- Input untuk alamat email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <!-- Input untuk tanggal lahir -->
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <!-- Input untuk jenis kelamin -->
+                <div class="form-group">
+                    <div style="width: 46%;">
+                        <label>Gender</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female" required>
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+                <!-- Pilihan program studi -->
+                <div class="form-group">
+                    <label for="program">Program of Interest</label>
+                    <select id="program" name="program" required>
+                        <option value=""></option>
+                        <option value="MAN - International Business Management">MAN - International Business Management</option>
+                        <option value="MAN - Digital Business Management">MAN - Digital Business Management</option>
+                        <option value="MAN - Communication Business Management">MAN - Communication Business Management</option>
+                        <option value="MAN - Culinary Business Management">MAN - Culinary Business Management</option>
+                        <option value="IMT - Fullstack Developer">IMT - Fullstack Developer</option>
+                        <option value="IMT - Artificial Intelligence">IMT - Artificial Intelligence</option>
+                        <option value="VCD - Illustration">VCD - Illustration</option>
+                        <option value="VCD - Graphic Design">VCD - Graphic Design</option>
+                        <option value="VCD - Digital Media Design">VCD - Digital Media Design</option>
+                    </select>
+                </div>
+                <!-- Input untuk alamat -->
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+                <!-- Input untuk nomor telepon -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                </div>
+                <!-- Input untuk nama ibu -->
+                <div class="form-group">
+                    <label for="mother">Mother's Name</label>
+                    <input type="text" id="mother" name="mother" required>
+                </div>
+                <!-- Input untuk nama ayah -->
+                <div class="form-group">
+                    <label for="father">Father's Name</label>
+                    <input type="text" id="father" name="father" required>
+                </div>
+                <!-- Input untuk unggah foto -->
+                <div class="form-group">
+                    <label for="photo">Photo</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+                <!-- Tombol untuk mengirimkan formulir -->
+                <div class="form-group">
+                    <button type="submit"><strong>SUBMIT</strong></button>
+                </div>
+            </form>
+        </div>
+        <!-- Kontainer untuk menampilkan informasi yang dimasukkan pengguna -->
+        <div class="display-info-container">
+            <div id="displayInfo"></div>
+        </div>
+    </div>
+    <!-- Script JavaScript untuk logika formulir -->
+    <script src="script.js"></script>
+</body>
+</html>
